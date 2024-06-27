@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC-TOC-TOE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="name-input">
+            <h1 id="heading">TIC-TAC-TOE</h1>
+            <h2 id="heading2">Presented by DE-FAKE</h2>
+            <input type="text" id="player1" placeholder="Enter Player 1 Name">
+            <input type="text" id="player2" placeholder="Enter Player 2 Name">
+            <div id="game-mode">
+                <label for="mode-select">Choose opponent:</label>
+                <select id="mode-select">
+                    <option value="player2">Player 2</option>
+                    <option value="ai">AI</option>
+                </select>
+            </div>
+            <button id="start-game">Start Game</button>
+        </div>
+        <div class="game-container" style="display: none;">
+            <button id="back-arrow">← Back</button>
+            <div class="container">
+                <button class="button-option"></button>
+                <button class="button-option"></button>
+                <button class="button-option"></button>
+                <button class="button-option"></button>
+                <button class="button-option"></button>
+                <button class="button-option"></button>
+                <button class="button-option"></button>
+                <button class="button-option"></button>
+                <button class="button-option"></button>
+            </div>
+            <div id="result" style="display: none;"></div>
+            <button id="restart">Restart Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
