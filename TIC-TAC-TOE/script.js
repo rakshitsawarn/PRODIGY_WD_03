@@ -139,7 +139,7 @@ startGameBtn.addEventListener("click", () => {
             nameInputDiv.style.display = "none";
             gameContainerDiv.style.display = "flex";
             gameStarted = true;
-            // Start AI gameplay logic
+            
             startAIGame();
         } else {
             alert("Please enter your name.");
@@ -154,11 +154,11 @@ backArrowBtn.addEventListener("click", () => {
 });
 
 function startAIGame() {
-    // Add AI gameplay logic here (e.g., random moves)
+   
     btnRef.forEach((element) => {
         element.addEventListener("click", () => {
             if (gameStarted && !xTurn) {
-                // AI's turn logic (random move example)
+                
                 let emptyButtons = [...btnRef].filter(btn => btn.innerText === "");
                 let randomIndex = Math.floor(Math.random() * emptyButtons.length);
                 emptyButtons[randomIndex].innerText = "O";
