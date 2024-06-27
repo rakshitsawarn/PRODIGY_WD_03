@@ -13,19 +13,19 @@ let player2Name = "";
 let gameStarted = false;
 let isAI = false;
 
-// Winning Pattern
+
 let winningPattern = [
-    [0, 1, 2], // Horizontal top row
-    [3, 4, 5], // Horizontal middle row
-    [6, 7, 8], // Horizontal bottom row
-    [0, 3, 6], // Vertical left column
-    [1, 4, 7], // Vertical middle column
-    [2, 5, 8], // Vertical right column
-    [0, 4, 8], // Diagonal from top-left to bottom-right
-    [2, 4, 6], // Diagonal from top-right to bottom-left
+    [0, 1, 2], 
+    [3, 4, 5], 
+    [6, 7, 8], 
+    [0, 3, 6], 
+    [1, 4, 7], 
+    [2, 5, 8], 
+    [0, 4, 8],
+    [2, 4, 6],
 ];
 
-// Player X
+
 let xTurn = true;
 let count = 0;
 
@@ -84,7 +84,7 @@ const winChecker = () => {
     }
 };
 
-// Display X/0 on click
+
 btnRef.forEach((element) => {
     element.addEventListener("click", () => {
         if (gameStarted && !element.innerText) {
@@ -106,7 +106,7 @@ btnRef.forEach((element) => {
     });
 });
 
-// Restart game
+
 restartBtn.addEventListener("click", () => {
     btnRef.forEach((element) => {
         element.innerText = "";
@@ -121,7 +121,7 @@ restartBtn.addEventListener("click", () => {
     gameContainerDiv.style.display = "none";
 });
 
-// Start game
+
 startGameBtn.addEventListener("click", () => {
     player1Name = document.getElementById("player1").value;
     if (modeSelect.value === "player2") {
@@ -147,7 +147,7 @@ startGameBtn.addEventListener("click", () => {
     }
 });
 
-// Back to name input
+
 backArrowBtn.addEventListener("click", () => {
     gameContainerDiv.style.display = "none";
     nameInputDiv.style.display = "flex";
